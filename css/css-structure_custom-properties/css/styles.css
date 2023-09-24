@@ -4,8 +4,17 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-granite: rgb(37 38 41);
+  --color-nemo: rgb(255 74 17);
+  --color-foam: rgb(255 255 255);
+  --border-radius-small: 4px;
+  --margin-none: 0px;
+  --display-flex: flex;
+}
+
 body {
-  margin: 0;
+  margin: var(--margin-none);
   font-family: system-ui;
   line-height: 1.2;
 }
@@ -16,9 +25,9 @@ header {
 
 h1 {
   text-align: center;
-  color: white;
+  color: var(--color-foam);
   line-height: 1.4;
-  margin: 0;
+  margin: var(--margin-none);
   letter-spacing: 0.025em;
   text-transform: uppercase;
   padding-block: 16px;
@@ -29,11 +38,11 @@ h2 {
 }
 
 strong {
-  color: #ff4a11;
+  color: var(--color-nemo);
 }
 
 section {
-  display: flex;
+  display: var(--display-flex);
   flex-wrap: wrap;
   gap: 32px;
   padding: 16px;
@@ -52,21 +61,21 @@ img {
 
 figure {
   width: min(100%, 400px);
-  display: flex;
+  display: var(--display-flex);
   flex-direction: column;
   gap: 10px;
-  margin: 0;
+  margin: var(--margin-none);
   padding: 10px;
-  background-color: #ff4a11ff;
-  border-radius: 4px;
+  background-color: var(--color-nemo);
+  border-radius: var(--border-radius-small);
 }
 
 figcaption {
-  color: rgb(255 255 255);
+  color: var(--color-foam);
 }
 
 nav {
-  display: flex;
+  display: var(--display-flex);
   flex-wrap: wrap;
   gap: 8px 16px;
 }
@@ -75,25 +84,25 @@ a {
   display: inline-block;
   font-size: smaller;
   padding: 8px;
-  border-radius: 4px;
-  background-color: hsl(14 100% 53%);
-  color: #fff;
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-nemo);
+  color: var(--color-foam);
 }
 
 a:hover,
 a:focus-visible {
-  background-color: rgb(37 38 41);
+  background-color: var(--color-granite);
   text-decoration: none;
 }
 
 mark {
-  background-color: rgb(255 74 17);
-  color: #ffffff;
-  border-radius: 4px;
+  background-color: var(--color-nemo);
+  color: var(--color-foam);
+  border-radius: var(--border-radius-small);
   letter-spacing: 0.025em;
 }
 
 ::selection {
-  background-color: #252629;
-  color: #ff4a11;
+  background-color: var(--color-granite);
+  color: var(--color-foam);
 }
