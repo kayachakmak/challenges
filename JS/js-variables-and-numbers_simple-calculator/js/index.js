@@ -55,6 +55,8 @@ Update the first operand
 Please don't forget to think about the declaration of the variable "operand1".
 */
 
+let newValue;
+
 const increaseByOneButton = document.querySelector(
   '[data-js="increase-by-one"]'
 );
@@ -74,42 +76,36 @@ const divideByTwoButton = document.querySelector('[data-js="divide-by-two"]');
 
 increaseByOneButton.addEventListener("click", () => {
   // 7. Increase the value of "operand1" by 1. Log the new value to the console.
-  let operand1Upd = 12;
-  operand1Upd++;
-  console.log(operand1Upd);
+  newValue = operand1 + 1;
+  console.log(newValue);
 });
 
 increaseByFiveButton.addEventListener("click", () => {
   // 8. Increase the value of "operand1" by 5. Log the new value to the console.
-  let operand1Upd = 12;
-  operand1Upd += 5;
-  console.log(operand1Upd);
+  newValue = operand1 + 5;
+  console.log(newValue);
 });
 
 decreaseByOneButton.addEventListener("click", () => {
   // 7. Decrease the value of "operand1" by 1. Log the new value to the console.
-  let operand1Upd = 12;
-  operand1Upd--;
-  console.log(operand1Upd);
+  newValue = operand1 - 1;
+  console.log(newValue);
 });
 
 decreaseByFiveButton.addEventListener("click", () => {
   // 8. Decrease the value of "operand1" by 5. Log the new value to the console.
-  let operand1Upd = 12;
-  operand1Upd -= 5;
-  console.log(operand1Upd);
+  newValue = operand1 - 5;
+  console.log(newValue);
 });
 
 multiplyByTwoButton.addEventListener("click", () => {
   // 11. Multiply the value of "operand1" by 2. Log the new value to the console.
-  let operand1Upd = 12;
-  operand1Upd *= 2;
-  console.log(operand1Upd);
+  newValue = operand1 * 2;
+  console.log(newValue);
 });
 
 divideByTwoButton.addEventListener("click", () => {
   // 12. Divide the value of "operand1" by 2. Log the new value to the console.
-  let operand1Upd = 12;
-  operand1Upd /= 2;
-  console.log(operand1Upd);
+  newValue = operand1 / 2;
+  console.log(newValue);
 });
