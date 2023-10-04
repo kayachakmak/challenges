@@ -23,7 +23,7 @@ printSquare(5);
 // Uncomment the following function calls and implement the function printCircumference
 
 function printCircumference(radius) {
-  const circumference = 2 * 3.14 * radius;
+  const circumference = Math.PI * radius;
   console.log(circumference);
 }
 printCircumference(4);
