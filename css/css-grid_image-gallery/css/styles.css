@@ -41,8 +41,12 @@ body {
   min-width: 40rem;
   min-height: 100vh;
   display: grid;
+<<<<<<< HEAD
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
+=======
+  grid-template: 1fr 1fr / 3fr 3fr;
+>>>>>>> main
 
   /* Add styles to the grid container */
 }
