@@ -15,24 +15,48 @@ redButton.addEventListener("click", () => {
   // use your functions to
   // - remove all classes
   // - then add the class name: "red"
+  removeAllColors();
+  addColor(redButton);
 });
 
 blueButton.addEventListener("click", () => {
   // use your functions to
   // - remove all classes
   // - then add the class name: "blue"
+  removeAllColors();
+  addColor(blueButton);
 });
 
 greenButton.addEventListener("click", () => {
   // use your functions to
   // - remove all classes
   // - then add the class name: "green"
+  removeAllColors();
+  addColor(greenButton);
 });
 
 grayButton.addEventListener("click", () => {
   // use your functions to
   // - remove all classes
   // - then add the class name: "gray"
+  removeAllColors();
+  addColor(grayButton);
 });
 
 // Write your two functions below:
+
+function removeAllColors() {
+  box.classList.remove("red", "blue", "green", "gray");
+}
+
+function addColor(button) {
+  if (button == redButton) {
+    box.classList.add("red");
+  } else if (button == blueButton) {
+    box.classList.add("blue");
+  } else if (button == greenButton) {
+    box.classList.add("green");
+  } else {
+    box.classList.add("gray");
+  }
+}
