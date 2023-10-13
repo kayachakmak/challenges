@@ -1,23 +1,15 @@
 console.clear();
 
+import { Circle } from "./components/Circle/circle.js";
+import { Square } from "./components/Square/square.js";
+import { Pentagon } from "./components/Pentagon/pentagon.js";
+
 const root = document.getElementById("root");
 
-const circle = document.createElement("div");
-circle.classList.add("circle");
-circle.addEventListener("click", () => {
-  circle.style.backgroundColor = "#ccc";
-});
+const circleElement = Circle();
 
-const square = document.createElement("div");
-square.classList.add("square");
-square.addEventListener("click", () => {
-  square.style.backgroundColor = "#ccc";
-});
+const squareElement = Square();
 
-const pentagon = document.createElement("div");
-pentagon.classList.add("pentagon");
-pentagon.addEventListener("click", () => {
-  pentagon.style.backgroundColor = "#ccc";
-});
+const pentagonElement = Pentagon();
 
-root.append(circle, square, pentagon);
+root.append(circleElement, squareElement, pentagonElement);
