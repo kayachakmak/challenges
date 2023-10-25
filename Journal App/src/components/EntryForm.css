@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+}
+
+textarea {
+  width: 100%;
+  padding: 15px;
+  min-height: 50px;
+  margin-bottom: 10px;
+  border-color: var(--color-water-10);
+  border-radius: 2px;
+}
+
+label {
+  align-self: flex-start;
+  margin-bottom: 5px;
+  color: var(--color-granite);
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-color: var(--color-water-10);
+  border-radius: 2px;
+  margin-bottom: 30px;
+}
+
+button {
+  margin-top: 20px;
+  display: block;
+  padding: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--color-nemo);
+  border: none;
+  border-radius: 2px;
+  color: var(--color-water-10);
+}
+
+legend {
+  margin-bottom: 20px;
+  color: var(--color-granite);
+}
