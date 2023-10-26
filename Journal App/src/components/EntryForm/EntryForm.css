@@ -34,7 +34,7 @@ input {
   margin-bottom: 30px;
 }
 
-button {
+.button__create {
   margin-top: 20px;
   display: block;
   padding: 25px;
@@ -42,7 +42,7 @@ button {
   padding-bottom: 10px;
   background-color: var(--color-nemo);
   border: none;
-  border-radius: 2px;
+  border-radius: 5px;
   color: var(--color-water-10);
 }
 

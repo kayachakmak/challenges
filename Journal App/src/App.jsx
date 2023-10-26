@@ -1,6 +1,7 @@
 import "./App.css";
-import Header from "./components/Header";
-import EntryForm from "./components/EntryForm";
+import Header from "./components/Header/Header";
+import EntryForm from "./components/EntryForm/EntryForm";
+import Entries from "./components/Entries/Entries";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <main>
         <EntryForm />
+        <Entries />
       </main>
     </>
   );
