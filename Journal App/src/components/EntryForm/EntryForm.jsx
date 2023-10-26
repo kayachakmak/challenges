@@ -8,7 +8,7 @@ export default function EntryForm() {
       <input type="text" name="motto" id="motto" />
       <label htmlFor="notes">Notes</label>
       <textarea name="notes" id="notes" />
-      <button type="submit">
+      <button type="submit" className="button__create">
         <strong>Create</strong>
       </button>
     </form>
