@@ -1,5 +1,15 @@
 .button__favorite {
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   border: none;
   background-color: transparent;
+}
+
+.entry {
+  border-bottom: 1px dotted var(--color-granite);
+  padding: 20px;
+}
+
+.entry__date {
+  text-align: center;
 }

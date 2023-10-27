@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Tab, Tabs, Badge } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import EntryList from "../EntryList/EntryList";
+import { entries } from "../../../lib";
+import "./TwoTabs.css";
 
 export default function TwoTabs() {
   const [key, setKey] = useState("tab1");
@@ -12,7 +14,7 @@ export default function TwoTabs() {
         eventKey="tab1"
         title={
           <span>
-            All Entries <Badge>3</Badge>
+            All Entries <Badge className="badge">{entries.length}</Badge>
           </span>
         }
       >
