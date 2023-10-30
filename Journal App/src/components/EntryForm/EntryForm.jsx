@@ -1,8 +1,18 @@
+/* eslint-disable react/prop-types */
 import "./EntryForm.css";
 
-export default function EntryForm() {
+export default function EntryForm({ onAddEntry }) {
+  function handleSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData);
+    onAddEntry(data);
+
+    event.target.reset();
+  }
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <legend>NEW ENTRY</legend>
       <label htmlFor="motto">Motto</label>
       <input type="text" name="motto" id="motto" />

@@ -1,7 +1,7 @@
+/* eslint-disable react/prop-types */
 import Entry from "../Entry/Entry";
-import { entries } from "../../../lib";
 
-export default function EntryList() {
+export default function EntryList({ entries }) {
   return (
     <>
       {entries.map((entry) => (

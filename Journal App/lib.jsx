@@ -1,4 +1,4 @@
-export const entries = [
+export const initialEntries = [
   {
     id: 1000,
     date: "Feb 5, 2025",

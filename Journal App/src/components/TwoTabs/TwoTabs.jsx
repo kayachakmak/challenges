@@ -1,13 +1,13 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { Tab, Tabs, Badge } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import EntryList from "../EntryList/EntryList";
-import { entries } from "../../../lib";
+import { initialEntries } from "../../../lib";
 import "./TwoTabs.css";
 
-export default function TwoTabs() {
+export default function TwoTabs({ entries }) {
   const [key, setKey] = useState("tab1");
-
   return (
     <Tabs id="controlled-tabs" activeKey={key} onSelect={(k) => setKey(k)}>
       <Tab
@@ -18,7 +18,7 @@ export default function TwoTabs() {
           </span>
         }
       >
-        <EntryList />
+        <EntryList entries={entries} />
       </Tab>
       <Tab
         eventKey="tab2"
