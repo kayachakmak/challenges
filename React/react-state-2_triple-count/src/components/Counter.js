@@ -3,10 +3,8 @@ import { useState } from "react";
 export default function Counter() {
   const [count, setCount] = useState(0);
 
-  function handleIncrement() {
-    setCount(count + 1);
-    setCount(count + 1);
-    setCount(count + 1);
+  async function handleIncrement() {
+    Promise.all(setCount(count + 1), setCount(count + 1), setCount(count + 1));
   }
 
   return (
