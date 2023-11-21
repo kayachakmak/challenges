@@ -1,3 +1,16 @@
+import useSWR from "swr";
+
 export default function HomePage() {
-  return <h1>Hello from Next.js!</h1>;
+  const fetcher = (...args) => fetch(...args).then((res) => res.json());
+
+  const { data } = useSWR("/api/random-character", fetcher);
+  console.log(data);
+  return (
+    <>
+      {" "}
+      <h1>
+        {data.firstName} {data.lastName} {data.age}
+      </h1>
+    </>
+  );
 }
