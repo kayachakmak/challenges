@@ -1,40 +1,34 @@
 import { StyledForm, StyledHeading, StyledLabel } from "./ProductForm.styled";
 import { StyledButton } from "../Button/Button.styled";
-import useSWR from "swr";
 
-export default function ProductForm() {
-  const { mutate } = useSWR("/api/products");
-
-  async function handleSubmit(event) {
-    event.preventDefault();
-
-    const formData = new FormData(event.target);
-    const productData = Object.fromEntries(formData);
-    const response = await fetch("/api/products", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(productData),
-    });
-
-    if (response.ok) {
-      mutate();
-    }
-  }
-
+export default function ProductForm({ onSubmit, editMode, fish }) {
   return (
-    <StyledForm onSubmit={handleSubmit}>
-      <StyledHeading>Add a new Fish</StyledHeading>
+    <StyledForm onSubmit={onSubmit} editMode={editMode} fish={fish}>
+      <StyledHeading>
+        {editMode ? "Edit the product" : "Add a new Fish"}
+      </StyledHeading>
       <StyledLabel htmlFor="name">
         Name:
-        <input type="text" id="name" name="name" />
+        <input defaultValue={fish?.name} type="text" id="name" name="name" />
       </StyledLabel>
       <StyledLabel htmlFor="description">
         Description:
-        <input type="text" id="description" name="description" />
+        <input
+          defaultValue={fish?.description}
+          type="text"
+          id="description"
+          name="description"
+        />
       </StyledLabel>
       <StyledLabel htmlFor="price">
         Price:
-        <input type="number" id="price" name="price" min="0" />
+        <input
+          defaultValue={fish?.price}
+          type="number"
+          id="price"
+          name="price"
+          min="0"
+        />
       </StyledLabel>
       <StyledLabel htmlFor="currency">
         Currency:

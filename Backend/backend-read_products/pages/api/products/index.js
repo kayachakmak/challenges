@@ -18,8 +18,6 @@ export default async function handler(request, response) {
         console.log(error);
         response.status(400).json({ error: error.message });
       }
-
-      return response.status(200).json(products);
     }
   } catch (err) {
     console.log(err);
